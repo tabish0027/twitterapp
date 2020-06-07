@@ -16,7 +16,6 @@ $client = new oauth_client_class;
 $client->debug = 1;
 $client->debug_http = 1;
 $client->redirect_uri = REDIRECT_URL;
-
 //$client->redirect_uri = 'oob';
 
 $client->client_id = CLIENT_ID;
@@ -35,7 +34,7 @@ if (($success = $client->Initialize())) {
     if (strlen($client->access_token)) {
       $success = $client->CallAPI(
               'https://api.twitter.com/1.1/account/verify_credentials.json', 'GET', array(), array('FailOnAccessError' => true), $user);
-      echo ("alert('api called')");
+      echo "alert('api called')";
     }
   }
   $success = $client->Finalize($success);
