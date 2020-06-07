@@ -33,9 +33,8 @@ try {
 }
 
 
-define("CLIENT_ID", "3059691325-cNVIClJdropFZTYV3gyh2HAJMnKMniWdv9RiTwO
-C");
-define("SECRET_KEY", "gFEnsz6DDeo7NhgrtQ6tdfQ7RpuToD4HoWCIjILYlQWPlH9gwh");
+define("CLIENT_ID", "WDdpbEojmeriq3Va1qdtOV3DB");
+define("SECRET_KEY", "3059691325-u3q1VHFBkSxLzZxbpxZnlYdyItZHKXQ84nU5yJ9");
 /* make sure the url end with a trailing slash, give your site URL */
 define("SITE_URL", "https://twitterpostsiri.herokuapp.com/twitterapi/");
 /* the page where you will be redirected for authorization */
