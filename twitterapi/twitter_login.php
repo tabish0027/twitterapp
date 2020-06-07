@@ -44,7 +44,7 @@ if ($client->exit){
    exit;
 }
  
-}
+
 /*
 if ($success) {
   // Now check if user exist with same email ID
