@@ -1,6 +1,6 @@
 <?php
 
-echo "helloworld";
+//echo "helloworld";
 ?>
 
 
@@ -8,8 +8,7 @@ echo "helloworld";
 <body>
 
 <form action="welcome.php" method="post">
-Name: <input type="text" name="name"><br>
-E-mail: <input type="text" name="email"><br>
+Name: <input type="text" name="Tweet" width = "400px"><br>
 <input type="submit">
 </form>
 <input type="button">
