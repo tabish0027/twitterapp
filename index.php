@@ -1,6 +1,10 @@
+
 <?php
 
-require 'bootstrap.php';
-use Abraham\TwitterOAuth\TwitterOAuth;
+//require 'bootstrap.php';
+//use Abraham\TwitterOAuth\TwitterOAuth;
 
-echo $twig->render('index.html');
+//echo $twig->render('index.html');
+
+echo "hello world";
+?>
