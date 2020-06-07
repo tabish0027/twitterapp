@@ -35,7 +35,11 @@ if (($success = $client->Initialize())) {
       $success = $client->CallAPI(
               'https://api.twitter.com/1.1/account/verify_credentials.json', 'GET', array(), array('FailOnAccessError' => true), $user);
       echo "alert('api called')";
+    }else{
+      echo "eccess token is wrong";
     }
+  }else{
+     echo "client giving error";
   }
   $success = $client->Finalize($success);
 }
