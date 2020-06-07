@@ -36,7 +36,7 @@ try {
 define("CLIENT_ID", "ymZOqN6AoAdbjzpZexOv33kv1Y");
 define("SECRET_KEY", "c4WFNsL3TEqBKGsV1E7KZcN6LfOkwVyhD2Dn2QUkMlUtFKCEtn");
 /* make sure the url end with a trailing slash, give your site URL */
-define("SITE_URL", "http://localhost/twitter-connect-login-system-php-mysql/");
+define("SITE_URL", "http://twitterpostsiri.herokuapp.com/twitterapi/");
 /* the page where you will be redirected for authorization */
 define("REDIRECT_URL", SITE_URL."twitter_login.php");
 
