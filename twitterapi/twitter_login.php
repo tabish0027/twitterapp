@@ -34,12 +34,18 @@ if (($success = $client->Initialize())) {
     if (strlen($client->access_token)) {
       $success = $client->CallAPI(
               'https://api.twitter.com/1.1/account/verify_credentials.json', 'GET', array(), array('FailOnAccessError' => true), $user);
+      echo ("alert('api called')");
     }
   }
   $success = $client->Finalize($success);
 }
-if ($client->exit)
-  exit;
+if ($client->exit){
+   echo "client dont exist";
+   exit;
+}
+ 
+}
+/*
 if ($success) {
   // Now check if user exist with same email ID
   $sql = "SELECT COUNT(*) AS count from users_twitter where twitter_id = :id";
@@ -78,6 +84,9 @@ if ($success) {
 } else {
   $_SESSION["e_msg"] = $client->error;
 }
+
 header("location:home.php");
 exit;
+*/
+
 ?>
