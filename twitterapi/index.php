@@ -9,7 +9,7 @@ if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] != "") {
   // user already logged in the site
   header("location:".SITE_URL . "home.php");
 }
-include './header.php';
+//include './header.php';
 ?>
 <div class="container">
   <div class="margin10"></div>
