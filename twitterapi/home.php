@@ -24,7 +24,7 @@ if (!isset($_SESSION["user_id"]) && $_SESSION["user_id"] == "") {
   <?php if ($_SESSION["new_user"] == "yes") { ?>
     <h2>Thank you <?php echo $_SESSION["name"] ?>, for registering with us!!!</h2>
   <?php } else { ?>
-    <h2>Welcome back <?php echo $_SESSION["name"] ?>!!!</h2>
+    <h2>Post Tweet<?php echo $_SESSION["name"] ?>!!!</h2>
   <?php } ?>
   
     <input type="text" id="post" name="post"><br><br>
@@ -42,10 +42,10 @@ if (!isset($_SESSION["user_id"]) && $_SESSION["user_id"] == "") {
   <script type="text/javascript">
     $(document).ready(function(){
         $('#clickpost').click(function(){
-            var clickBtnValue = $("#post").val();
-            
+            var post = $("#post").val();
+
             var ajaxurl = 'postcontent.php',
-            data =  {'post': clickBtnValue};
+            data =  {'status': post};
             $.post(ajaxurl, data, function (response) {
                 // Response div goes here.
                 alert("post posted successfully");
@@ -54,7 +54,7 @@ if (!isset($_SESSION["user_id"]) && $_SESSION["user_id"] == "") {
     });
 
 
-  </script>>
+  </script>
 </div>
 
 <?php
