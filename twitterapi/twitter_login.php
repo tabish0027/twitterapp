@@ -37,7 +37,7 @@ if (($success = $client->Initialize())) {
       //echo "alert('api called')";
 
       // post tweet on user account 
-      
+
 
     }else{
       echo "eccess token is wrong";
@@ -56,6 +56,9 @@ if ($client->exit){
 
 if ($success) {
   // Now check if user exist with same email ID
+  
+
+  /*
   $sql = "SELECT COUNT(*) AS count from users_twitter where twitter_id = :id";
   try {
     $stmt = $DB->prepare($sql);
@@ -87,7 +90,7 @@ if ($success) {
   } catch (Exception $ex) {
     $_SESSION["e_msg"] = $ex->getMessage();
   }
-
+  */
   $_SESSION["user_id"] = $user->id;
 } else {
   $_SESSION["e_msg"] = $client->error;
