@@ -9,7 +9,7 @@ if (!isset($_SESSION["user_id"]) && $_SESSION["user_id"] == "") {
   // user already logged in the site
   header("location:" . SITE_URL);
 }
-include './header.php';
+//include './header.php';
 ?>
 <div class="container col-sm-12">
    <?php if ($_SESSION["e_msg"] <> "") { ?>
@@ -24,6 +24,9 @@ include './header.php';
   <?php } else { ?>
     <h2>Welcome back <?php echo $_SESSION["name"] ?>!!!</h2>
   <?php } ?>
+  
+
+  
   <div class="margin20"></div>
   <div class="col-sm-3">
     <a class="btn btn-block btn-social btn-twitter" href="<?php echo LOGOUT_URL; ?>">
@@ -33,7 +36,7 @@ include './header.php';
   <div style="height:10px;clear: both; "></div>
 </div>
 <?php
-include './footer.php';
+//include './footer.php';
 // unset if after it display the error.
 $_SESSION["e_msg"] = "";
 ?>
