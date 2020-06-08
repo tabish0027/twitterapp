@@ -9,7 +9,8 @@
 require('http.php');
 require('oauth_client.php');
 require('config.php');
-require('Abraham/TwitterOAuth/TwitterOAuth.php');
+//require('Abraham/TwitterOAuth/TwitterOAuth.php');
+use Abraham\TwitterOAuth\TwitterOAuth;
 
 //require('config.php');
 
