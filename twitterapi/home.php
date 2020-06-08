@@ -43,7 +43,7 @@ if (!isset($_SESSION["user_id"]) && $_SESSION["user_id"] == "") {
     $(document).ready(function(){
         $('#clickpost').click(function(){
             var post = $("#post").val();
-
+            alert("Post "+post);
             var ajaxurl = 'postcontent.php',
             data =  {'status': post};
             $.post(ajaxurl, data, function (response) {
