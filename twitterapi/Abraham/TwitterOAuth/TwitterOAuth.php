@@ -11,7 +11,7 @@ declare(strict_types=1);
 namespace Abraham\TwitterOAuth;
 
 use Abraham\TwitterOAuth\Util\JsonDecoder;
-
+use Abraham\TwitterOAuth\Config;
 /**
  * TwitterOAuth class for interacting with the Twitter API.
  *
