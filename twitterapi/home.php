@@ -11,6 +11,8 @@ if (!isset($_SESSION["user_id"]) && $_SESSION["user_id"] == "") {
 }
 //include './header.php';
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+
 <div class="container col-sm-12">
    <?php if ($_SESSION["e_msg"] <> "") { ?>
     <div class="alert alert-dismissable alert-danger">
@@ -25,6 +27,9 @@ if (!isset($_SESSION["user_id"]) && $_SESSION["user_id"] == "") {
     <h2>Welcome back <?php echo $_SESSION["name"] ?>!!!</h2>
   <?php } ?>
   
+    <input type="text" id="post" name="post"><br><br>
+    <button type="button" id = "clickpost">Tweet</button>
+
 
   
   <div class="margin20"></div>
@@ -34,7 +39,24 @@ if (!isset($_SESSION["user_id"]) && $_SESSION["user_id"] == "") {
     </a>
   </div>
   <div style="height:10px;clear: both; "></div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('#clickpost').click(function(){
+            var clickBtnValue = $("#post").val();
+            
+            var ajaxurl = 'postcontent.php',
+            data =  {'post': clickBtnValue};
+            $.post(ajaxurl, data, function (response) {
+                // Response div goes here.
+                alert("post posted successfully");
+            });
+        });
+    });
+
+
+  </script>>
 </div>
+
 <?php
 //include './footer.php';
 // unset if after it display the error.
