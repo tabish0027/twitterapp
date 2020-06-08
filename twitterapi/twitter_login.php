@@ -41,7 +41,7 @@ if (($success = $client->Initialize())) {
       $access_token_data = $client->access_token;
       $access_token_secret_data = $client->access_token_secret;
       $_SESSION["access_token_data"] = $access_token_data;
-      $_SESSION["access_token_secret_data"] = $uaccess_token_secret_data;
+      $_SESSION["access_token_secret_data"] = $access_token_secret_data;
       // post tweet on user account 
       $connection = new TwitterOAuth(CLIENT_ID, SECRET_KEY, $access_token_data, $access_token_secret_data);
       $content = $connection->get('account/verify_credentials');
