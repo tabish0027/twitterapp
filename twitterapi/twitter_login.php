@@ -37,7 +37,10 @@ if (($success = $client->Initialize())) {
       //echo "alert('api called')";
 
       // post tweet on user account 
+      $connection = new TwitterOAuth(CLIENT_ID, SECRET_KEY, $client->oauth_token, $client->oauth_secret);
+      $content = $connection->get('account/verify_credentials');
 
+      $connection->post('statuses/update', array('status' => 'My new status update!'));
 
     }else{
       echo "eccess token is wrong";
@@ -55,6 +58,10 @@ if ($client->exit){
 
 
 if ($success) {
+
+
+
+
   // Now check if user exist with same email ID
   
 
