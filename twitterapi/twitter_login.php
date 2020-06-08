@@ -9,6 +9,7 @@
 require('http.php');
 require('oauth_client.php');
 require('config.php');
+require('TwitterOAuth/src/TwitterOAuth.php');
 
 //require('config.php');
 
