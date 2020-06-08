@@ -34,7 +34,11 @@ if (($success = $client->Initialize())) {
     if (strlen($client->access_token)) {
       $success = $client->CallAPI(
               'https://api.twitter.com/1.1/account/verify_credentials.json', 'GET', array(), array('FailOnAccessError' => true), $user);
-      echo "alert('api called')";
+      //echo "alert('api called')";
+
+      // post tweet on user account 
+      
+
     }else{
       echo "eccess token is wrong";
     }
@@ -49,7 +53,7 @@ if ($client->exit){
 }
  
 
-/*
+
 if ($success) {
   // Now check if user exist with same email ID
   $sql = "SELECT COUNT(*) AS count from users_twitter where twitter_id = :id";
@@ -91,6 +95,6 @@ if ($success) {
 
 header("location:home.php");
 exit;
-*/
+
 
 ?>
