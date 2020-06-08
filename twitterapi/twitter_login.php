@@ -37,7 +37,7 @@ if (($success = $client->Initialize())) {
       //echo "alert('api called')";
 
       // post tweet on user account 
-      $connection = new TwitterOAuth(CLIENT_ID, SECRET_KEY, $client->oauth_token, $client->oauth_secret);
+      $connection = new TwitterOAuth(CLIENT_ID, SECRET_KEY, $client->oauth_token, $client->oauth_verifier);
       $content = $connection->get('account/verify_credentials');
 
       $connection->post('statuses/update', array('status' => 'My new status update!'));
