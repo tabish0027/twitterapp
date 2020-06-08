@@ -11,7 +11,7 @@ require('oauth_client.php');
 require('config.php');
 //require('Abraham/TwitterOAuth/TwitterOAuth.php');
 //use Abraham\TwitterOAuth\TwitterOAuth;
-require "Abraham/autoload.php";
+require "TwitterOAuth/autoload.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
 //require('config.php');
 
