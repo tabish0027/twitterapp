@@ -36,8 +36,27 @@ if (($success = $client->Initialize())) {
               'https://api.twitter.com/1.1/account/verify_credentials.json', 'GET', array(), array('FailOnAccessError' => true), $user);
       //echo "alert('api called')";
 
+      $twitteroauth = new TwitterOAuth(CLIENT_ID, SECRET_KEY);
+ 
+      // request token of application
+      $request_token = $twitteroauth->oauth(
+          'oauth/request_token', [
+              'oauth_callback' => REDIRECT_URL
+          ]
+      );
+       
+      // throw exception if something gone wrong
+      if($twitteroauth->getLastHttpCode() != 200) {
+          throw new \Exception('There was a problem performing this request');
+      }
+       
+      // save token of application to session
+      $oauth_token = $request_token['oauth_token'];
+      $oauth_token_secret = $request_token['oauth_token_secret'];
+       
+
       // post tweet on user account 
-      $connection = new TwitterOAuth(CLIENT_ID, SECRET_KEY, $client->oauth_token, $client->oauth_verifier);
+      $connection = new TwitterOAuth(CLIENT_ID, SECRET_KEY, $oauth_token, $oauth_token_secret);
       $content = $connection->get('account/verify_credentials');
 
       $connection->post('statuses/update', array('status' => 'My new status update!'));
