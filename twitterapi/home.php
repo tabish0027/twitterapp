@@ -48,7 +48,7 @@ if (!isset($_SESSION["user_id"]) && $_SESSION["user_id"] == "") {
             data =  {'status': post};
             $.post(ajaxurl, data, function (response) {
                 // Response div goes here.
-                alert("post posted successfully");
+                alert(data);
             });
         });
     });
