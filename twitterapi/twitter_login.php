@@ -10,8 +10,9 @@ require('http.php');
 require('oauth_client.php');
 require('config.php');
 //require('Abraham/TwitterOAuth/TwitterOAuth.php');
+//use Abraham\TwitterOAuth\TwitterOAuth;
+require "twitteroauth/autoload.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
-
 //require('config.php');
 
 $client = new oauth_client_class;
